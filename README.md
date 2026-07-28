@@ -93,6 +93,26 @@ so you can retake the same exam.
 `.progress.json` is per-machine practice data and is git-ignored. Set
 `STUDYTOOL_ROOT` to point the tool at a different repo copy (used by the tests).
 
+## Exercises
+
+Each exercise lives in its own `ex<level>-<n>/` folder holding the `.en`
+question and a `solution.py` reference (shown only via the `solution`
+command). Your attempts accumulate there as `try<N>.py`, created by
+`ask`/`exam`. Four levels, two exercises per level.
+
+| id    | function                | original file(s) |
+|-------|-------------------------|------------------|
+| ex1-1 | `sort_list_of_lists`    | sort_list_of_list.py |
+| ex1-2 | `merge_sort_unique`     | merge_sort_unique_3.py |
+| ex2-1 | `list_intersection`     | intersection.py |
+| ex2-2 | `sliding_w_m`           | sliding_max.py, sublist_max.py, sublist_1.py |
+| ex3-1 | `constellation_mapper`  | constellation_mapper_1.py |
+| ex3-2 | `arr_rotation_detector` | array_rotation_detector.py |
+| ex4-1 | `palindrome_cut`        | palindrome.py |
+| ex4-2 | `resolve_dependencies`  | dependency_resolver.py |
+
+The untouched original files are kept in `_originals/`.
+
 ## Layout
 
 ```
