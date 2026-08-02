@@ -327,6 +327,70 @@
           "try": "try2.py"
         }
       ]
+    },
+    "ex4-2": {
+      "attempts": [
+        {
+          "all_passed": false,
+          "gradeable": 0,
+          "load_error": "IndentationError: expected an indented block after function definition on line 18 (try1.py, line 21)",
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-02T20:03:14",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 3,
+          "load_error": null,
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-02T20:15:10",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 3,
+          "load_error": null,
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-02T20:17:17",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 0,
+          "load_error": "TypeError: DependecyResove.resolve() missing 1 required positional argument: 'deps'",
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-02T20:27:23",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 0,
+          "load_error": "TypeError: DependecyResove.resolve() missing 1 required positional argument: 'deps'",
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-02T20:29:42",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 3,
+          "load_error": null,
+          "passed": 3,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-02T20:31:38",
+          "try": "try1.py"
+        }
+      ]
     }
   },
   "round": {
@@ -337,9 +401,10 @@
       "ex2-2",
       "ex3-1",
       "ex3-2",
-      "ex4-1"
+      "ex4-1",
+      "ex4-2"
     ],
-    "last": "ex4-1"
+    "last": "ex4-2"
   },
   "version": 1
 }
