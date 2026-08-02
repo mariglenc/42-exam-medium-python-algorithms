@@ -1,0 +1,345 @@
+{
+  "exercises": {
+    "ex1-1": {
+      "attempts": [
+        {
+          "all_passed": true,
+          "gradeable": 4,
+          "load_error": null,
+          "passed": 4,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-07-28T20:24:30",
+          "try": "try1.py"
+        }
+      ]
+    },
+    "ex1-2": {
+      "attempts": [
+        {
+          "all_passed": true,
+          "gradeable": 4,
+          "load_error": null,
+          "passed": 4,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-07-29T09:39:12",
+          "try": "try1.py"
+        }
+      ]
+    },
+    "ex2-1": {
+      "attempts": [
+        {
+          "all_passed": true,
+          "gradeable": 4,
+          "load_error": null,
+          "passed": 4,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-07-29T10:06:26",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 4,
+          "load_error": null,
+          "passed": 4,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-07-29T10:12:07",
+          "try": "try1.py"
+        }
+      ]
+    },
+    "ex2-2": {
+      "attempts": [
+        {
+          "all_passed": false,
+          "gradeable": 6,
+          "load_error": null,
+          "passed": 1,
+          "score": 0.1667,
+          "skipped": 0,
+          "timestamp": "2026-07-29T21:37:12",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 6,
+          "load_error": null,
+          "passed": 1,
+          "score": 0.1667,
+          "skipped": 0,
+          "timestamp": "2026-07-29T21:37:25",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 6,
+          "load_error": null,
+          "passed": 1,
+          "score": 0.1667,
+          "skipped": 0,
+          "timestamp": "2026-07-29T21:37:31",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 6,
+          "load_error": null,
+          "passed": 1,
+          "score": 0.1667,
+          "skipped": 0,
+          "timestamp": "2026-07-29T21:37:50",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 6,
+          "load_error": null,
+          "passed": 3,
+          "score": 0.5,
+          "skipped": 0,
+          "timestamp": "2026-07-29T22:10:49",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 6,
+          "load_error": null,
+          "passed": 6,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-07-29T22:11:38",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 6,
+          "load_error": null,
+          "passed": 6,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-07-29T22:14:33",
+          "try": "try2.py"
+        }
+      ]
+    },
+    "ex3-1": {
+      "attempts": [
+        {
+          "all_passed": false,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-07-30T18:25:54",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-07-30T18:53:45",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-07-30T18:53:48",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 5,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-07-30T18:53:51",
+          "try": "try1.py"
+        }
+      ]
+    },
+    "ex3-2": {
+      "attempts": [
+        {
+          "all_passed": false,
+          "gradeable": 9,
+          "load_error": null,
+          "passed": 6,
+          "score": 0.6667,
+          "skipped": 0,
+          "timestamp": "2026-07-30T21:58:43",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 9,
+          "load_error": null,
+          "passed": 9,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-07-30T21:59:45",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 9,
+          "load_error": null,
+          "passed": 6,
+          "score": 0.6667,
+          "skipped": 0,
+          "timestamp": "2026-07-30T22:08:10",
+          "try": "try2.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 9,
+          "load_error": null,
+          "passed": 9,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-07-30T22:08:35",
+          "try": "try2.py"
+        }
+      ]
+    },
+    "ex4-1": {
+      "attempts": [
+        {
+          "all_passed": false,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 2,
+          "score": 0.4,
+          "skipped": 0,
+          "timestamp": "2026-07-31T14:25:14",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 0,
+          "load_error": "RecursionError: maximum recursion depth exceeded in comparison",
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-07-31T14:25:53",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 5,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-07-31T14:26:25",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 4,
+          "score": 0.8,
+          "skipped": 0,
+          "timestamp": "2026-08-02T08:11:17",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 4,
+          "score": 0.8,
+          "skipped": 0,
+          "timestamp": "2026-08-02T08:11:57",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 5,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-02T08:13:07",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 5,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-02T08:14:55",
+          "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 2,
+          "score": 0.4,
+          "skipped": 0,
+          "timestamp": "2026-08-02T08:49:01",
+          "try": "try2.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 2,
+          "score": 0.4,
+          "skipped": 0,
+          "timestamp": "2026-08-02T09:09:14",
+          "try": "try2.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 5,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-02T09:10:45",
+          "try": "try2.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 5,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-02T09:34:35",
+          "try": "try2.py"
+        }
+      ]
+    }
+  },
+  "round": {
+    "asked": [
+      "ex1-1",
+      "ex1-2",
+      "ex2-1",
+      "ex2-2",
+      "ex3-1",
+      "ex3-2",
+      "ex4-1"
+    ],
+    "last": "ex4-1"
+  },
+  "version": 1
+}
