@@ -6,22 +6,24 @@ class DependencyResolver:
         self.visited=set()
         self.visiting=set()
         self.order=[]
-
-
-    # visits every package (running DFS on each unvisited one) 
-        # and returns the reversed build-up order as the final result
+    # declare constuctor:
+        # self.deps=deps
+        # self.visited=set()
+        # self.visiting=set()
+        # self.order=[]
+    
     def resolve(self):
         for pkg in self.deps:
             if pkg not in self.visited:
                 self._dfs(pkg)
         return self.order[::-1]
 
+    # decalre resolve with self paramter -> at the main function we execute the resolve
+        # iterate over all self.deps
+        # if not in self.visited the self.dfs that pkg
+        # return the self.order reversed [::-1]
 
-    # It recursively processes a package by first:  
-        # handling all its dependencies, 
-        # detecting cycles along the way, 
-        # then marking it done 
-        # and adding it to the order.
+
     def _dfs(self, pkg):
         if pkg in self.visiting:
             raise ValueError(f"Cyclic dependency detected involving '{pkg}'")
@@ -37,14 +39,18 @@ class DependencyResolver:
         self.visiting.remove(pkg)   # no longer exploring this - remove an item from the set
         self.visited.add(pkg)       # this is now finished - add an item to the set
         self.order.append(pkg)      # add pkg to the end of the list
+    # check if is already being visiting - if so raise valueerror
+    # check if is already visted - if so return
+    # add in self.visiting
+    # iterate for other deps of the pkg and for each one run self dfs
+    # remove from visiting
+    # add in visited
+    # append in order list
 
-# The mental model — the two sets are like a status flag:
-# not in either set  → haven't touched it yet
-# in visiting        → currently exploring it (mid-recursion)
-# in visited         → completely finished
 
 def resolve_dependencies(deps: dict[str, list[str]]) -> list[str]:
     return DependencyResolver(deps).resolve()
+# execute the class and call the resolve func on it
 
 
 print(resolve_dependencies({'app': ['lib1', 'lib2'], 'lib1': ['core'], 'lib2': ['core'], 'core': []}))  # ['app', 'lib2', 'lib1', 'core']

@@ -1,0 +1,12 @@
+ex 4-2
+    issues at the resolve funct params:
+        passed also deps at params
+        instead should use only self
+        and when itereate at self.deps
+        should first check if not in self visited
+        then self dfs on pkg
+        and return self orders reverse [::-1]
+
+    issues at the dfs func
+        forget to add in visiting set the pkg
+        not sure how this .get method worlks and what is [] empty list in the get method of dict

@@ -389,19 +389,32 @@
           "skipped": 0,
           "timestamp": "2026-08-02T20:31:38",
           "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 3,
+          "load_error": null,
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-03T01:21:10",
+          "try": "try2.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 3,
+          "load_error": null,
+          "passed": 3,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-03T01:21:36",
+          "try": "try2.py"
         }
       ]
     }
   },
   "round": {
     "asked": [
-      "ex1-1",
-      "ex1-2",
-      "ex2-1",
-      "ex2-2",
-      "ex3-1",
-      "ex3-2",
-      "ex4-1",
       "ex4-2"
     ],
     "last": "ex4-2"
