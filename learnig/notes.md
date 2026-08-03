@@ -6,7 +6,7 @@ ex 4-1
     not sure why did end+1 at is palindrome func, why needed + 1
     not sure why we check the start>=end  at min cuts func
     forget what to iterate on the min cuts
-
+    make a mistake at is palindorme func for the index start end isntead of : i used ,
 
 ex 4-2
     issues at the resolve funct params:
@@ -18,6 +18,7 @@ ex 4-2
         and return self orders reverse [::-1]
         forget the self param in constructor
         forget to iterate on resolve with for pkg in self.deps
+        forget to return self.order in reverse [::-1]
 
     issues at the dfs func
         forget to add in visiting set the pkg
