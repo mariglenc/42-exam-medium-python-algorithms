@@ -1,3 +1,12 @@
+
+ex1-2
+    forgot the unique func
+
+ex 4-1
+    not sure why did end+1 at is palindrome func, why needed + 1
+    not sure why we check the start>=end  at min cuts func
+
+
 ex 4-2
     issues at the resolve funct params:
         passed also deps at params
