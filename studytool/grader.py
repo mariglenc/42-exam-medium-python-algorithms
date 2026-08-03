@@ -9,12 +9,17 @@ Grading is a plain ``==`` comparison with ONE deliberate exception: ``bool`` is
 a subclass of ``int`` in Python, so ``True == 1`` is otherwise True. We keep
 bools and ints distinct at the top level, so returning ``1`` when ``True`` is
 expected is graded as a FAIL (these exercises really do mean the bool).
+
+Each example runs in a separate child process with a time limit (default 5s,
+override with ``STUDYTOOL_TIMEOUT``). An attempt stuck in an infinite loop is
+killed and scored as TIMEOUT instead of hanging the grader and eating RAM.
 """
 from __future__ import annotations
 
 import contextlib
 import importlib.util
 import io
+import multiprocessing as mp
 import os
 import sys
 import traceback
@@ -24,6 +29,11 @@ from typing import Any, Callable
 from .enparser import Example, ParsedEn
 
 _load_counter = 0
+
+DEFAULT_TIMEOUT = 5.0
+
+# fork (Linux/macOS) starts children in milliseconds; Windows only has spawn
+_CTX = mp.get_context("fork" if "fork" in mp.get_all_start_methods() else "spawn")
 
 
 @dataclass
@@ -112,15 +122,64 @@ def _load_function(try_path: str, func_name: str | None) -> Callable:
     )
 
 
-def grade_file(parsed: ParsedEn, try_path: str, ex_id: str) -> GradeResult:
-    """Run every gradeable example from ``parsed`` against ``try_path``."""
-    res = GradeResult(ex_id=ex_id, try_file=os.path.basename(try_path))
+def _example_worker(conn, try_path: str, func_name: str | None, args, kwargs) -> None:
+    """Child-process body: load the attempt, run one example, send the outcome.
 
+    Runs in a separate process so the parent can kill it if the attempt never
+    returns (infinite loop) or allocates unboundedly.
+    """
     try:
-        func = _load_function(try_path, parsed.func_name)
+        func = _load_function(try_path, func_name)
     except Exception as exc:  # noqa: BLE001 - report any import/load failure verbatim
-        res.load_error = f"{type(exc).__name__}: {exc}"
-        return res
+        conn.send(("load_error", f"{type(exc).__name__}: {exc}"))
+        return
+    try:
+        with contextlib.redirect_stdout(io.StringIO()):
+            got = func(*args, **kwargs)
+    except Exception as exc:  # noqa: BLE001 - the attempt raised; that's a failing case
+        conn.send(("error", f"{type(exc).__name__}: {exc}"))
+        return
+    try:
+        conn.send(("ok", got))
+    except Exception as exc:  # noqa: BLE001 - e.g. return value not picklable
+        conn.send(("error", f"return value could not be sent back: {exc}"))
+
+
+def _run_example(try_path: str, func_name: str | None, ex: Example,
+                 timeout: float) -> tuple[str, Any]:
+    """Run one example in a child process; kill it after ``timeout`` seconds."""
+    parent_conn, child_conn = _CTX.Pipe(duplex=False)
+    proc = _CTX.Process(
+        target=_example_worker,
+        args=(child_conn, try_path, func_name, ex.args, ex.kwargs),
+        daemon=True,
+    )
+    proc.start()
+    child_conn.close()
+    try:
+        if parent_conn.poll(timeout):
+            try:
+                kind, payload = parent_conn.recv()
+            except EOFError:  # child died without reporting (crash, exit())
+                kind, payload = "error", "attempt process died unexpectedly"
+        else:
+            kind, payload = "timeout", (
+                f"no result after {timeout:g}s - killed (likely an infinite loop)"
+            )
+    finally:
+        if proc.is_alive():
+            proc.kill()
+        proc.join()
+        parent_conn.close()
+    return kind, payload
+
+
+def grade_file(parsed: ParsedEn, try_path: str, ex_id: str,
+               timeout: float | None = None) -> GradeResult:
+    """Run every gradeable example from ``parsed`` against ``try_path``."""
+    if timeout is None:
+        timeout = float(os.environ.get("STUDYTOOL_TIMEOUT", DEFAULT_TIMEOUT))
+    res = GradeResult(ex_id=ex_id, try_file=os.path.basename(try_path))
 
     for ex in parsed.examples:
         if not ex.gradeable:
@@ -130,14 +189,18 @@ def grade_file(parsed: ParsedEn, try_path: str, ex_id: str) -> GradeResult:
             continue
 
         res.gradeable += 1
-        try:
-            with contextlib.redirect_stdout(io.StringIO()):
-                got = func(*ex.args, **ex.kwargs)
-        except Exception as exc:  # noqa: BLE001 - the attempt raised; that's a failing case
+        kind, got = _run_example(try_path, parsed.func_name, ex, timeout)
+
+        if kind == "load_error":
+            res.load_error = got
+            return res
+        if kind == "timeout":
             res.results.append(ExampleResult(
-                call=ex.call, status="ERROR", expected=ex.expected,
-                detail=f"{type(exc).__name__}: {exc}",
-            ))
+                call=ex.call, status="TIMEOUT", expected=ex.expected, detail=got))
+            continue
+        if kind == "error":
+            res.results.append(ExampleResult(
+                call=ex.call, status="ERROR", expected=ex.expected, detail=got))
             continue
 
         if _values_equal(got, ex.expected):

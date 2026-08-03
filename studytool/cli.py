@@ -46,6 +46,7 @@ def _enable_color() -> bool:
 _COLOR = _enable_color()
 _C = {
     "PASS": "\033[32m", "FAIL": "\033[31m", "ERROR": "\033[35m",
+    "TIMEOUT": "\033[31m",
     "SKIP": "\033[33m", "dim": "\033[2m", "bold": "\033[1m", "reset": "\033[0m",
 }
 
@@ -188,6 +189,8 @@ def _print_grade(res: GradeResult) -> None:
             print(f"        expected {r.expected!r}, got {r.got!r}")
         elif r.status == "ERROR":
             print(f"        raised {r.detail}")
+        elif r.status == "TIMEOUT":
+            print(f"        {r.detail}")
         elif r.status == "SKIP":
             print(f"        {r.detail}")
     pct = f"{res.score * 100:.0f}%"
