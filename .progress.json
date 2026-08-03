@@ -167,6 +167,26 @@
           "skipped": 0,
           "timestamp": "2026-07-30T18:53:51",
           "try": "try1.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-03T11:02:10",
+          "try": "try4.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 5,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-03T11:03:40",
+          "try": "try4.py"
         }
       ]
     },
@@ -415,9 +435,10 @@
   },
   "round": {
     "asked": [
-      "ex4-2"
+      "ex4-2",
+      "ex3-1"
     ],
-    "last": "ex4-2"
+    "last": "ex3-1"
   },
   "version": 1
 }
