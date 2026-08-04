@@ -61,6 +61,16 @@
           "skipped": 0,
           "timestamp": "2026-08-03T22:55:44",
           "try": "try5.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 4,
+          "load_error": null,
+          "passed": 4,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:30:17",
+          "try": "try6.py"
         }
       ]
     },
@@ -125,6 +135,26 @@
           "skipped": 0,
           "timestamp": "2026-08-03T22:28:56",
           "try": "try5.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 4,
+          "load_error": null,
+          "passed": 2,
+          "score": 0.5,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:51:51",
+          "try": "try6.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 4,
+          "load_error": null,
+          "passed": 4,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:52:24",
+          "try": "try6.py"
         }
       ]
     },
@@ -279,6 +309,36 @@
           "skipped": 0,
           "timestamp": "2026-08-03T22:02:47",
           "try": "try5.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 4,
+          "load_error": null,
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:35:26",
+          "try": "try6.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 4,
+          "load_error": null,
+          "passed": 3,
+          "score": 0.75,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:35:39",
+          "try": "try6.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 4,
+          "load_error": null,
+          "passed": 4,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:35:51",
+          "try": "try6.py"
         }
       ]
     },
@@ -473,6 +533,16 @@
           "skipped": 0,
           "timestamp": "2026-08-03T22:05:17",
           "try": "try6.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 6,
+          "load_error": null,
+          "passed": 6,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:55:17",
+          "try": "try7.py"
         }
       ]
     },
@@ -577,6 +647,16 @@
           "skipped": 0,
           "timestamp": "2026-08-03T22:37:06",
           "try": "try7.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 5,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:58:13",
+          "try": "try8.py"
         }
       ]
     },
@@ -751,6 +831,26 @@
           "skipped": 0,
           "timestamp": "2026-08-03T22:31:31",
           "try": "try6.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 9,
+          "load_error": null,
+          "passed": 9,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:50:02",
+          "try": "try7.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 9,
+          "load_error": null,
+          "passed": 9,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:59:50",
+          "try": "try8.py"
         }
       ]
     },
@@ -1015,6 +1115,56 @@
           "skipped": 0,
           "timestamp": "2026-08-03T22:48:50",
           "try": "try6.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 2,
+          "score": 0.4,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:40:07",
+          "try": "try7.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 1,
+          "load_error": "TypeError: min_cuts() takes 3 positional arguments but 4 were given",
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:42:57",
+          "try": "try7.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 1,
+          "load_error": "TypeError: min_cuts() takes 3 positional arguments but 4 were given",
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:43:00",
+          "try": "try7.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 1,
+          "load_error": "RecursionError: maximum recursion depth exceeded",
+          "passed": 0,
+          "score": 0.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:43:08",
+          "try": "try7.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 5,
+          "load_error": null,
+          "passed": 5,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:48:06",
+          "try": "try7.py"
         }
       ]
     },
@@ -1149,22 +1299,55 @@
           "skipped": 0,
           "timestamp": "2026-08-03T22:54:04",
           "try": "try5.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 3,
+          "load_error": null,
+          "passed": 1,
+          "score": 0.3333,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:28:05",
+          "try": "try6.py"
+        },
+        {
+          "all_passed": false,
+          "gradeable": 3,
+          "load_error": null,
+          "passed": 1,
+          "score": 0.3333,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:28:54",
+          "try": "try6.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 3,
+          "load_error": null,
+          "passed": 3,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:29:21",
+          "try": "try6.py"
+        },
+        {
+          "all_passed": true,
+          "gradeable": 3,
+          "load_error": null,
+          "passed": 3,
+          "score": 1.0,
+          "skipped": 0,
+          "timestamp": "2026-08-04T09:29:25",
+          "try": "try6.py"
         }
       ]
     }
   },
   "round": {
     "asked": [
-      "ex2-1",
-      "ex2-2",
-      "ex1-2",
-      "ex3-2",
-      "ex3-1",
-      "ex4-1",
-      "ex4-2",
-      "ex1-1"
+      "ex3-2"
     ],
-    "last": "ex1-1"
+    "last": "ex3-2"
   },
   "version": 1
 }
